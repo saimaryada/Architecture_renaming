@@ -44,6 +44,38 @@ The final cleanup scripts write audit files into `E:\EMKP_work`:
 - `EMKP_final_rename_rollback.csv`: rollback map for renamed files.
 - `EMKP_final_rename_rollback_with_filenames.csv`: optional helper output from `rename.py`.
 
+## Latest Asset Summary
+
+The latest reported cleanup summary:
+
+| Metric | Count / Size |
+| --- | ---: |
+| Original assets | 1,168 |
+| Assets to delete | 0 |
+| Retained / renamed | 1,168 |
+| Original size | 125.62 GB |
+| Delete size | 0.00 GB |
+| Retained size | 125.62 GB |
+
+Retained asset types:
+
+| Type | Assets | Size (GB) |
+| --- | ---: | ---: |
+| MP4 | 389 | 65.58 |
+| TIF | 610 | 58.17 |
+| OBJ | 3 | 1.12 |
+| PDF | 161 | 0.75 |
+| TXT | 2 | 0.00 |
+| INI | 3 | 0.00 |
+
+Deletion rules:
+
+1. Entire folder: `15_EXTRAS`
+2. All `.DNG` files
+3. All `.JPG` / `.JPEG` files
+4. All `.ARW` files
+5. `.TXT` files are retained
+
 ## Safety Notes
 
 - `finalize_emkp_assets.py` and `backup_assest.py` can permanently delete files when `DRY_RUN = False`.
